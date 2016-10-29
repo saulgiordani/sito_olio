@@ -1,11 +1,11 @@
-<h1>{{title}}</h1>
-<p>{{body}}</p>
+<div class="container" ng-controller="HomeCtrl as listaNotizie">
+	<div class="row notizia" ng-repeat="notizia in listaNotizie.notizie">
+		<div class="title">
+			<h1>{{notizia.titolo}}</h1>
+		</div>
 
-<hr>
-<div>
-    <h2 class="text-error">Home: {{message}}</h2>
-    <form class="form-inline">
-      <input type="text" ng-model="message" placeholder="Message">
-      <button type="submit" class="btn" ng-click="updateMessage(message)">Update Message</button>
-    </form>
+		<div class="content">
+			<p>{{notizia.testo}}</p>
+		</div>
+	</div>
 </div>
